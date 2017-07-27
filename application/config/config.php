@@ -24,6 +24,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 $config['base_url'] = 'http://localhost/dinas';
+define('HTTP_CSS_PATH', $config['base_url'].'/assets/css/');
+define('HTTP_IMAGES_PATH', $config['base_url'].'/assets/img/');
+define('HTTP_JS_PATH', $config['base_url'].'/assets/js/');
+
+// //setting smtp server 
+// $config['protocol'] = 'smtp';
+// //$config['smtp_host']= "ssl://mail.kemdikbud.go.id/";
+// $config['smtp_host']= 'ssl://smtp.googlemail.com';
+// $config['smtp_port']= 465;
+// //$config['smtp_user'] = 'pembinaantenaga.kesenian';
+// $config['smtp_pass']='Kesenian123';
+// $config['smtp_secure'] = 'ssl';
+// $config['smtp_auth'] = TRUE;
+// $config['smtp_crypto']='ssl';
+// $config['validate']=TRUE;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,7 +50,7 @@ $config['base_url'] = 'http://localhost/dinas';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = 'index.php';
+$config['index_page'] = '';
 
 /*
 |--------------------------------------------------------------------------
@@ -158,7 +173,7 @@ $config['composer_autoload'] = FALSE;
 | DO NOT CHANGE THIS UNLESS YOU FULLY UNDERSTAND THE REPERCUSSIONS!!
 |
 */
-$config['permitted_uri_chars'] = 'a-z 0-9~%.:_\-';
+$config['permitted_uri_chars'] = 'a-z 0-9~%.:_\-@';
 
 /*
 |--------------------------------------------------------------------------
@@ -314,7 +329,7 @@ $config['cache_query_string'] = FALSE;
 | https://codeigniter.com/user_guide/libraries/encryption.html
 |
 */
-$config['encryption_key'] = 'Nomenklatur';
+$config['encryption_key'] = 'Numenklatur';
 
 /*
 |--------------------------------------------------------------------------
