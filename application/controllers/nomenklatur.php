@@ -11,13 +11,10 @@ class Nomenklatur extends CI_Controller
 	function index()
 	{
 		$this->load->model('dinas_model');
-		//$this->dinas_model->simpan_dinas();
-		//$this->load->view('form_nomenklatur');
 		
 		//memilih provinsi dan kabupaten
 		$data['option_provinsi'] = $this ->dinas_model->getProvinsiList();
 		$this->load->view('form_nomenklatur',$data);
-		
 	}
 	
 	function select_kota_kab(){
@@ -38,23 +35,14 @@ class Nomenklatur extends CI_Controller
 		$this->load->view('form_proses');
 	
 	
-	/*function simpan_dinas()
-	{
-		$simpan_data=array(
-			'nama_dinas' => $this->input->post('nama_dinas'),
-			'dasar_hukum' => $this->input->post('dasar_hukum'),
-			'alamat_kantor' => $this->input->post('alamat_kantor'),
-			'no_telepon' => $this->input->post('no_telepon'),
-			'email' => $this->input->post('email'),
-			'website' => $this->input->post('website')
-		);
-		//$this->load->database();
-		$simpan = $this->db->insert('dinas', $simpan_data);
-		return $simpan;
-
-	}*/
+	
 	
 	}
+	
+	function baca_data()
+	{
+		$baca = $this->db->get('dinas');
+		if($baca->result() as $data;
 	
 	
 	
