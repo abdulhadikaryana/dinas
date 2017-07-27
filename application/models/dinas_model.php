@@ -1,9 +1,21 @@
 <?php
 
-class dinas_model extends CI_Model{
+class Dinas_Model extends CI_Model{
 	function _construct(){
 		parent::CI_Model();
 		
+	}
+	
+	function baca_data()
+	{
+		$baca = $this->db->get('dinas');
+		if($baca->num_rows() > 0){
+			foreach($baca->result() as $data_dinas){
+				$hasil[]= $data_dinas;
+			}
+			return $hasil;
+		}
+	
 	}
 	
 	function getProvinsiList(){

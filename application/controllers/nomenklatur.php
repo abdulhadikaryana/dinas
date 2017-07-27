@@ -13,6 +13,7 @@ class Nomenklatur extends CI_Controller
 		$this->load->model('dinas_model');
 		
 		//memilih provinsi dan kabupaten
+		$data_dinas['hasil']=$this->dinas_model->baca_data();
 		$data['option_provinsi'] = $this ->dinas_model->getProvinsiList();
 		$this->load->view('form_nomenklatur',$data);
 	}
@@ -42,7 +43,15 @@ class Nomenklatur extends CI_Controller
 	function baca_data()
 	{
 		$baca = $this->db->get('dinas');
-		if($baca->result() as $data;
+		if($baca->num_rows() > 0){
+			foreach($baca->result() as $data_dinas){
+				$hasil[]= $data_dinas;
+			}
+			return $hasil;
+		}
+	
+	}
+	
 	
 	
 	
