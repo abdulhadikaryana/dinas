@@ -64,4 +64,26 @@ class Nomenklatur extends CI_Controller
 		
 		$this->db->insert('jabatan', $data_jabatan);
 	}
+
+	public function aksi_login(){
+		$this->load->model('m_login');
+		$username = $this->input->post('username'); 
+		$password = $this->input->post('password');
+			
+
+		if ($this->m_login->cek_login($username, $password)){
+				redirect(base_url().'nomenklatur/dashboard','refresh');
+		} else {
+			echo '<h3> Username atau password yang anda masukan salah <h3>'; 
+			echo '<a href="'.site_url('login').'"> Kembali </a>';  
+		}
+	}
+
+	public function dashboard(){
+		$this->load->view('template/header');
+		$this->load->view('template/navigation');
+		$this->load->view('dashboard');
+		$this->load->view('template/footer');
+		
+	}
 }

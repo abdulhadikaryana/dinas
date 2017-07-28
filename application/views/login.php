@@ -1,20 +1,54 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		
-	</head>
-	<body>	
-		<h1>Login</h1>
-		<form action="<?php echo site_url('Login/aksi_login'); ?>" method="POST">
-			<label>Username</label>
-			<input type="text" name="username">
-			<br>
-			<br>
-			<label>Password</label>
-			<input type="password" name="password">
-			<br>
-			<br>
-			<input type="submit" value="Login">
-		</form>
-	</body>
-</html>
+<body>
+		<div class="container-fluid-full">
+		<div class="row-fluid">
+					
+			<div class="row-fluid">
+				<div class="login-box">
+					<div class="icons">
+						<a href="index.html"><i class="halflings-icon home"></i></a>
+						<a href="#"><i class="halflings-icon cog"></i></a>
+					</div>
+					<h2>Login to your account</h2>
+					<form class="form-horizontal" action="<?=site_url('nomenklatur/aksi_login'); ?>" method="post">
+						<fieldset>
+							
+							<div class="input-prepend" title="Username">
+								<span class="add-on"><i class="halflings-icon user"></i></span>
+								<input class="input-large span10" name="username" id="username" type="text" placeholder="type username"/>
+							</div>
+							<div class="clearfix"></div>
+
+							<div class="input-prepend" title="Password">
+								<span class="add-on"><i class="halflings-icon lock"></i></span>
+								<input class="input-large span10" name="password" id="password" type="password" placeholder="type password"/>
+							</div>
+							<div class="clearfix"></div>
+							
+							<label class="remember" for="remember"><input type="checkbox" id="remember" />Remember me</label>
+
+							<div class="button-login">	
+								<button type="submit" class="btn btn-primary">Login</button>
+							</div>
+							<div class="clearfix"></div>
+					</form>
+					<hr>
+					<h3>Forgot Password?</h3>
+					<p>
+						No problem, <a href="#">click here</a> to get a new password.
+					</p>	
+				</div><!--/span-->
+			</div><!--/row-->
+			
+
+	</div><!--/.fluid-container-->
+	
+		</div><!--/fluid-row-->
+	    <div class="common-modal modal fade" id="common-Modal1" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-content">
+				<ul class="list-inline item-details">
+					<li><a href="http://themifycloud.com">Admin templates</a></li>
+					<li><a href="http://themescloud.org">Bootstrap themes</a></li>
+				</ul>
+			</div>
+		</div>
+	
